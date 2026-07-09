@@ -20,7 +20,8 @@ export default function Chessboard({
   onSquareClick,
   onSquareRightClick
 }: ChessboardWrapperProps) {
-  const handlePieceDrop = (sourceSquare: string, targetSquare: string): boolean => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handlePieceDrop = ({ sourceSquare, targetSquare }: any): boolean => {
     return onPieceDrop(sourceSquare, targetSquare);
   };
 
